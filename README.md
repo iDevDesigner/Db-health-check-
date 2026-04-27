@@ -11,3 +11,6 @@ https://mega.nz/file/yxBhyCLQ#ueFwEBBuBdxYVmTduEhzcr7YCifv35OhWKweB51GHUg
 
 extension new:
 https://mega.nz/file/Cko1EQTS#DBvwJe5XlIb9NfRyKq5_EZuLWyh74RAY32NnYg7PGX8
+
+extension all:
+https://mega.nz/file/PpplmBbJ#iI7s1BOFaEHk7mFi317wm_tK0FQueqA18WFFVyaEwag
