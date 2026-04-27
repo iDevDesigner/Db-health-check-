@@ -14,3 +14,6 @@ https://mega.nz/file/Cko1EQTS#DBvwJe5XlIb9NfRyKq5_EZuLWyh74RAY32NnYg7PGX8
 
 extension all:
 https://mega.nz/file/PpplmBbJ#iI7s1BOFaEHk7mFi317wm_tK0FQueqA18WFFVyaEwag
+
+extension folder:
+https://mega.nz/file/v0AxxC7D#VSPBUNh0VKiEJG2k1JOY515PVauF8vIjUT4qMwThdlE
