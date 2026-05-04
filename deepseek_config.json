@@ -1,0 +1,30 @@
+{
+  "global": { "output_dir": "./reports" },
+  "global_thresholds": {
+    "rman_full_max_days": 7,
+    "rman_incr_max_hours": 25,
+    "rman_arch_max_hours": 3,
+    "fra_warn_pct": 75,
+    "gg_lag_crit_sec": 300
+  },
+  "servers": [
+    {
+      "hostname": "racnode1",
+      "oracle_user": "oracle",
+      "grid_user": "grid",
+      "oracle_base": "/u01/app/oracle",
+      "gg_home": "/u01/app/oracle/goldengate",
+      "databases": [
+        {
+          "db_name": "FINDB1",
+          "sid": "FINDB11",
+          "pdbs": ["FINPDB1", "FINPDB2", "FINPDB3"],
+          "expdp_dir": "/expdpbkp/daily",
+          "expdp_max_age_hours": 25,
+          "rman_check": true,
+          "gg_check": true
+        }
+      ]
+    }
+  ]
+}

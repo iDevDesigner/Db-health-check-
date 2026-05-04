@@ -1,0 +1,81 @@
+{
+  "global": {
+    "output_dir": "/shared/hc_reports",
+    "max_workers": 3
+  },
+  "global_thresholds": {
+    "fra_warn_pct": 75,
+    "fra_crit_pct": 90,
+    "rman_full_max_days": 7,
+    "rman_incr_max_hours": 25,
+    "rman_arch_max_hours": 3,
+    "expdp_max_age_hours": 25,
+    "gg_lag_warn_sec": 60,
+    "gg_lag_crit_sec": 300,
+    "dg_lag_warn_sec": 300,
+    "dg_lag_crit_sec": 900
+  },
+  "servers": [
+    {
+      "hostname": "racnode1.example.com",
+      "oracle_user": "oracle",
+      "grid_user": "grid",
+      "oracle_base": "/u01/app/oracle",
+      "gg_home": "/u01/app/oracle/goldengate",
+      "thresholds": {
+        "disk_warn_pct": 80,
+        "disk_crit_pct": 90
+      },
+      "databases": [
+        {
+          "db_name": "FINDB",
+          "sid": "FINDB1",
+          "pdbs": ["FINPDB1", "FINPDB2", "FINPDB3", "FINPDB4"],
+          "expdp_dir": "/expdpbkp/daily",
+          "expdp_max_age_hours": 25,
+          "rman_check": true,
+          "gg_check": true
+        }
+      ]
+    },
+    {
+      "hostname": "racnode2.example.com",
+      "oracle_user": "oracle",
+      "grid_user": "grid",
+      "oracle_base": "/u01/app/oracle",
+      "databases": [
+        {
+          "db_name": "FINDB",
+          "sid": "FINDB2",
+          "pdbs": ["FINPDB1", "FINPDB2", "FINPDB3", "FINPDB4"],
+          "expdp_dir": "/expdpbkp/daily",
+          "rman_check": true
+        }
+      ]
+    },
+    {
+      "hostname": "racnode3.example.com",
+      "oracle_user": "oracle",
+      "grid_user": "grid",
+      "oracle_base": "/u01/app/oracle",
+      "gg_home": "/u01/app/oracle/goldengate",
+      "databases": [
+        {
+          "db_name": "FINDB",
+          "sid": "FINDB3",
+          "pdbs": ["FINPDB1", "FINPDB2", "FINPDB3", "FINPDB4"],
+          "expdp_dir": "/expdpbkp/daily",
+          "rman_check": true,
+          "gg_check": true
+        },
+        {
+          "db_name": "HRDB",
+          "sid": "HRDB1",
+          "pdbs": ["HRPDB1", "HRPDB2"],
+          "expdp_dir": "/expdpbkp/daily",
+          "rman_check": true
+        }
+      ]
+    }
+  ]
+}
